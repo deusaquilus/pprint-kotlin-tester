@@ -16,11 +16,11 @@ kotlin {
 
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         mainRun {
-            mainClass = "MainKt"
+            mainClass.set("MainKt")
         }
     }
 
-    linuxX64 {
+    linuxX64() {
         binaries {
             executable(listOf(DEBUG, RELEASE)) {
                 entryPoint = "main"
@@ -54,8 +54,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation("io.exoquery:pprint-kotlin:1.2.2-SNAPSHOT")
-                //implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2")
+                implementation("io.exoquery:pprint-kotlin-kmp:2.1.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2")
             }
         }
     }

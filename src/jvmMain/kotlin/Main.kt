@@ -1,10 +1,7 @@
-import io.exoquery.pprint.PPrinterReflect
+import io.exoquery.kmp.pprint
+import io.exoquery.kmp.pprint.PPrinter
+import kotlinx.serialization.Serializable
 
 fun main() {
     doPPrint()
-
-    data class Bar(val name: String)
-
-    val pprintReflect = PPrinterReflect()
-    println(pprintReflect(Bar("hello, reflect")))
 }
